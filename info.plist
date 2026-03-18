@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.appsbylloyd.Solo</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>07BF0598-D833-47E1-B112-4BFA830DD99D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B03BC1A9-7B64-4C6F-82BF-BF98F8FBF1C2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>84DDD792-BB1E-46DE-8CF8-40130CF4D773</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BD3C2EF7-3CBF-4AD4-94D7-A2536DF86BBE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BD3C2EF7-3CBF-4AD4-94D7-A2536DF86BBE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>07BF0598-D833-47E1-B112-4BFA830DD99D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Lloyd Keijzer</string>
+	<key>description</key>
+	<string>Manage projects and processes in Solo</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Solo</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching processes...</string>
+				<key>script</key>
+				<string>bash list_processes.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Select a process to open in Solo</string>
+				<key>title</key>
+				<string>Solo processes</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>07BF0598-D833-47E1-B112-4BFA830DD99D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>bash open_in_solo.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B03BC1A9-7B64-4C6F-82BF-BF98F8FBF1C2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:KEYWORD}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching Solo projects...</string>
+				<key>script</key>
+				<string>bash list_projects.sh</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Select a Solo project</string>
+				<key>title</key>
+				<string>Solo projects</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>84DDD792-BB1E-46DE-8CF8-40130CF4D773</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>BD3C2EF7-3CBF-4AD4-94D7-A2536DF86BBE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Solo - Alfred Workflow
+ 
+Browse and control your [Solo](https://soloterm.com) projects and processes directly from Alfred.
+ 
+## Compatibility
+ 
+This workflow has been tested against **Solo v0.5.9**. When using a newer version, functionality could break. Please report any bugs by sending an email to lloyd@appsbylloyd.com.
+ 
+## Prerequisites
+ 
+- **Solo** installed and running — [soloterm.com](https://soloterm.com)
+- **HTTP API enabled** in Solo under Settings → Integrations
+- **Port number** copied from that same settings screen into the `HTTP_API_PORT` field in this workflow's configuration (click the `[x]` icon in the top-right corner of the workflow in Alfred Preferences)
+ 
+## Usage
+ 
+Type `solo` in Alfred to get started.
+ 
+### Project list
+ 
+- `Enter` — Drill down into the project's processes
+- `⌘ Enter` — Start all auto-start processes
+- `⌃ Enter` — Stop all processes
+- `⇧ Enter` — Go to project
+
+![Showing Project list](images/screenshot_1.png)
+ 
+### Process list
+ 
+- `Enter` — Navigate to the process
+- `⌘ Enter` — Start process (or Restart if already running)
+- `⌃ Enter` — Stop process (disabled if already stopped)
+
+![Showing Process list](images/screenshot_2.png)
+ 
+You can type to filter the process list after selecting a project.
+
+![Showing Process list filtering](images/screenshot_3.png)
+ 
+## Workflow Configuration
+ 
+Open the workflow configuration by clicking the `[x]` icon in the top-right corner of the workflow in Alfred Preferences.
+ 
+- `KEYWORD` — Trigger this workflow by typing this value in Alfred (defaults to `solo`)
+- `HTTP_API_PORT` — Port number of the Solo HTTP API, found in Solo → Settings → Integrations
+
+![Showing Workflow Configuration](images/screenshot_4.png)</string>
+	<key>uidata</key>
+	<dict>
+		<key>07BF0598-D833-47E1-B112-4BFA830DD99D</key>
+		<dict>
+			<key>xpos</key>
+			<real>475</real>
+			<key>ypos</key>
+			<real>320</real>
+		</dict>
+		<key>84DDD792-BB1E-46DE-8CF8-40130CF4D773</key>
+		<dict>
+			<key>xpos</key>
+			<real>205</real>
+			<key>ypos</key>
+			<real>320</real>
+		</dict>
+		<key>B03BC1A9-7B64-4C6F-82BF-BF98F8FBF1C2</key>
+		<dict>
+			<key>xpos</key>
+			<real>665</real>
+			<key>ypos</key>
+			<real>320</real>
+		</dict>
+		<key>BD3C2EF7-3CBF-4AD4-94D7-A2536DF86BBE</key>
+		<dict>
+			<key>xpos</key>
+			<real>390</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>solo</string>
+				<key>placeholder</key>
+				<string>solo</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Trigger this workflow by typing 'solo' in Alfred.</string>
+			<key>label</key>
+			<string>KEYWORD</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>KEYWORD</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>24678</string>
+				<key>placeholder</key>
+				<string>24678</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>In the Solo app navigate to settings (cmd+,) and then under Integrations, make sure the HTTP API is enabled and copy the port number to this field.</string>
+			<key>label</key>
+			<string>HTTP API PORT</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>HTTP_API_PORT</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1</string>
+	<key>webaddress</key>
+	<string>https://appsbylloyd.com</string>
+</dict>
+</plist>
